@@ -10,7 +10,6 @@ const PATHS = {
     assets: 'assets/'
 }
 
-
 module.exports = {
     externals: {
         path: PATHS
@@ -32,6 +31,13 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                }
+            },
+            {
+                test:  /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
@@ -63,6 +69,10 @@ module.exports = {
             {
                 from: `${PATHS.src}/img`,
                 to: `${PATHS.assets}img`
+            },
+            {
+                from: `${PATHS.src}/fonts`,
+                to: `${PATHS.assets}fonts`
             }
         ]),
         new CleanWebpackPlugin(),

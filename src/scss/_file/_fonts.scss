@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url('/assets/fonts/ProximaNova-Regular.eot'); // IE9 Compat Modes
+    src: url('/assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('/assets/fonts/ProximaNova-Regular.woff') format('woff'), // Pretty Modern Browsers
+         url('/assets/fonts/ProximaNova-Regular.ttf')  format('truetype'), // Safari, Android, iOS
+         url('/assets/fonts/ProximaNova-Regular.svg') format('svg'); // Legacy iOS
+  }
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url('/assets/fonts/ProximaNova-Bold.eot'); // IE9 Compat Modes
+    src: url('/assets/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('/assets/fonts/ProximaNova-Bold.woff') format('woff'), // Pretty Modern Browsers
+         url('/assets/fonts/ProximaNova-Bold.ttf')  format('truetype'), // Safari, Android, iOS
+         url('/assets/fonts/ProximaNova-Bold.svg') format('svg'); // Legacy iOS
+  }

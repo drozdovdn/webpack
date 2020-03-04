@@ -1,5 +1,10 @@
-body {
-    // color: tomato;
-    display: flex;
-    background: tomato;
+@import "./_file/fonts.scss";
+@import "./_file/default.scss";
+
+
+.header {
+    p {
+        font-family:'ProximaNova-Bold',sans-serif;
+        font-size: 24px;
+    }
 }
