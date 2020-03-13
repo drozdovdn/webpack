@@ -36,7 +36,7 @@ class App extends Component {
       ...todos[foundElement],
       isChecked: !todos[foundElement].isChecked
     };
-
+    // console.log(...todos.slice[foundElement]);
     this.setState({
       todos: [
         ...todos.slice(0, foundElement),
@@ -44,6 +44,7 @@ class App extends Component {
         ...todos.slice(foundElement + 1),
       ]
     });
+      // console.log(newTodo);
   };
 
   submitHandler = (evt) => {
@@ -91,15 +92,29 @@ class App extends Component {
         />
         <ul className="list">
           {
-            todos.map(el => (
-              <ItemTodo
-                elementId={el.id}
-                removeHandler={this.removeHandler}
-                toggleHandler={this.toggleHandler}
-                elementValue={el.value}
-                isChecked={el.isChecked}
-              />
-            ))
+            todos.map(el => {
+                return (
+                    <li key={el.id} >
+                        <span className="cross" data-elementid={el.id}>X</span>
+                        <input
+                            type="checkbox"
+                            checked={el.isChecked}
+                            data-elementid={el.id}
+                            // onChange={this.toggleHandler}
+                        />
+                        {el.value}
+                    </li>
+                );
+
+
+                {/*<ItemTodo*/}
+                    {/*elementId={el.id}*/}
+                    {/*removeHandler={this.removeHandler}*/}
+                    {/*toggleHandler={this.toggleHandler}*/}
+                    {/*elementValue={el.value}*/}
+                    {/*isChecked={el.isChecked}*/}
+                {/*/>*/}
+            })
           }
         </ul>
       </div>

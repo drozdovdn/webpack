@@ -8,3 +8,6 @@
     cursor: pointer;
     color: red;
 }
+.done {
+    text-decoration: line-through;
+}
