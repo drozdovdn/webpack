@@ -1,5 +1,3 @@
-// import './scss/file/default.scss';
-// import './scss/file/fonts.scss';
 
 import './scss/main.scss';
 

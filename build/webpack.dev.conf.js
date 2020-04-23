@@ -6,15 +6,17 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
     devServer: {
         contentBase: baseWebpackConfig.externals.path.dist,
-        port: 8081,
-        overlay: true
+        port: 4000,
+        overlay: true,
+        hot: true,
+        open: true
     },
     plugins: []
 });
 
 module.exports = new Promise((resolve, reject) => {
     resolve(devWebpackConfig);
-})
+});
 
 
 

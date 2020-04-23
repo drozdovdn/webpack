@@ -14,7 +14,6 @@ module.exports = {
     externals: {
         path: PATHS
     },
-
     entry: {
         app: PATHS.src
     },
@@ -44,24 +43,14 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(c|sc)ss$/,
                 use: [
-                    'style-loader',
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'
                 ]
             },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            }
         ]
     },
     plugins: [
@@ -77,10 +66,10 @@ module.exports = {
         ]),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name]-[hash:8].css`
+            filename: `[name]-[hash:8].css`
         }),
         new HtmlWebpackPlugin({
             template: `${PATHS.src}/index.html`
         })
     ]
-}
+};
